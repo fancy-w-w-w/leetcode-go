@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rpc.cloud.base;
+option go_package = "./protocol/read;reader";
+option java_package = "./protocol/read";
+import "writer.proto";
+import "nio/tigerwang/nio.test.proto";
+
+
+message ReadV1{
+   StUser user = 1;
+   org.nio.test.Test  dax = 2;
+}
