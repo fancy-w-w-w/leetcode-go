@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	binarysearch "project1/internal/binary_search"
+	"project1/internal/tree"
 )
 
 func main() {
-	fmt.Println(binarysearch.SearchNumV2([]int{1, 0, 1, 1, 1}, 0))
+	fmt.Println(tree.GenerateTrees(3))
 }
 
 func String[T any](str ...T) {

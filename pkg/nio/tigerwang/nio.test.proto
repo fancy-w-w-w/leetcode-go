@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package org.nio.test;
+option go_package = "../../protocol/test;test";
+option java_package = "./protocol/test";
+// Test
+message Test{
+    string name = 1;
+}
