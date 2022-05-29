@@ -20,4 +20,5 @@ func InorderTraversal(root *TreeNode) []int {
 	}
 	inorder(root)
 	return res
+
 }
