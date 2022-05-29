@@ -1,0 +1,292 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-redhat-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun May 29 21:25:34 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+PROVIDE_FULLSTACK_ACTION = true
+# environment
+VSCODE_AGENT_FOLDER = /home/tigerwang/.vscode-server
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'makefile', line 1)
+TARGET = leetcode
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'makefile', line 5)
+CMD_DIR = $(PROJECT_PATH)/cmd
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/tigerwang/work/project1
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/home/tigerwang/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/home/tigerwang/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tigerwang/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/tigerwang/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# environment
+MAVEN_HOME = /home/tigerwang/javatool/apache-maven-3.8.5/
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+HISTCONTROL = ignoredups
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1001/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+LESSOPEN = ||/usr/bin/lesspipe.sh %s
+# environment
+VSCODE_CWD = /home/tigerwang
+# environment
+GOPROXY = https://mirrors.aliyun.com/goproxy/,direct
+# environment
+GOMODCACHE = /home/tigerwang/go/pkg/mod
+# environment
+SSH_CONNECTION = 36.5.239.174 13830 10.0.16.4 22
+# environment
+PATH = /home/tigerwang/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+GOLANG_EXECUTABLE = go
+# environment
+XDG_RUNTIME_DIR = /run/user/1001
+# environment
+THREE_SCALE_USER_TOKEN = 207c527cfc2a6b8dcf4fa43ad7a976da
+# environment
+GOPATH = /home/tigerwang/go
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-8d35f4d4-729c-4568-8ec5-7e29e84e4c3b.sock
+# environment
+MAVEN_BIN = /home/tigerwang/javatool/apache-maven-3.8.5//bin/
+# default
+ 
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+UUID = 7cf80959-57b8-4f6e-8fb3-c9a488ad7e45
+# environment
+LS_COLORS = 
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/tigerwang/work/project1
+# default
+.LOADED := 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/tigerwang
+# environment
+LOGNAME = tigerwang
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# environment
+TELEMETRY_ID = 5b042273-6498-4c7e-b910-7ec8f22b1afa
+# environment
+ZSH = /home/tigerwang/.oh-my-zsh
+# environment
+M2_HOME = /home/tigerwang/javatool/apache-maven-3.8.5/
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+HOSTNAME = VM-16-4-centos
+# makefile (from 'makefile', line 3)
+PROJECT_PATH = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 4
+# environment
+JAVA_HOME = /usr/local/jdk-17.0.2
+# makefile (from 'makefile', line 7)
+BUILD_DIR = $(PROJECT_PATH)/build
+# environment
+XDG_SESSION_ID = 44980
+# environment
+USER = tigerwang
+# makefile
+.DEFAULT_GOAL := all
+# environment
+CLASSPATH = .:/usr/local/jdk-17.0.2/lib/dt.jar:/usr/local/jdk-17.0.2/lib/tools.jar
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# environment
+UTM_SOURCE = vscode
+# environment
+OLDPWD = /home/tigerwang
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_CLIENT = 36.5.239.174 13830 22
+# environment
+MAIL = /var/spool/mail/tigerwang
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
+# environment
+BROWSER = /home/tigerwang/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/helpers/browser.sh
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+HISTSIZE = 50000
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# default
+MAKE_HOST := x86_64-redhat-linux-gnu
+# environment
+LANG = C
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# variable set hash-table stats:
+# Load=93/1024=9%, Rehash=0, Collisions=11/138=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64769, inode 787958): 15 files, no impossibilities.
+
+# 15 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all:
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/26=4%
+#  recipe to execute (from 'makefile', line 18):
+	@echo $(BUILD_DIR)
+	@mkdir -p $(BUILD_DIR)
+	@cd $(CMD_DIR) && CC=$(CC) CXX=$(CXX) go build --ldflags '-extldflags "-static"' -v -o $(BUILD_DIR)/$(TARGET)
+	@echo "build success"
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-14 10:50:24.088746301
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 24):
+	rm -f $(BUILD_DIR)/$(TARGET)
+
+# files hash-table stats:
+# Load=5/1024=0%, Rehash=0, Collisions=0/17=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 21 / storage = 156 B / avg = 7 B
+# current buf: size = 8162 B / used = 156 B / count = 21 / avg = 7 B
+
+# strcache performance: lookups = 29 / hit rate = 27%
+# hash-table stats:
+# Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
+# Finished Make data base on Sun May 29 21:25:34 2022
+
+ 

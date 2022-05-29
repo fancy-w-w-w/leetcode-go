@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/tigerwang/work/project1'
+echo /home/tigerwang/work/project1//build
+mkdir -p /home/tigerwang/work/project1//build
+cd /home/tigerwang/work/project1//cmd && CC=cc CXX=g++ go build --ldflags '-extldflags "-static"' -v -o /home/tigerwang/work/project1//build/leetcode
+echo "build success"
+make: Leaving directory '/home/tigerwang/work/project1'
+ 

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(wordplay.IsPalindrome("A man, a plan, a canal: Panama"))
+	fmt.Println(wordplay.LargestNumber([]int{10, 2, 9, 39, 17}))
 }
 
 func String[T any](str ...T) {
