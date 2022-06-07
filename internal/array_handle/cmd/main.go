@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	shuru := []int{3, 6, 9, 1}
-	fmt.Println(arrayhandle.MaximumGap(shuru))
+
+	fmt.Println(arrayhandle.FindKthLargest([]int{}, 1))
 }
