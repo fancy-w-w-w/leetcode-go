@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 29 21:25:34 2022
+# Make data base, printed on Tue Jun  7 10:02:45 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ GOPROXY = https://mirrors.aliyun.com/goproxy/,direct
 # environment
 GOMODCACHE = /home/tigerwang/go/pkg/mod
 # environment
-SSH_CONNECTION = 36.5.239.174 13830 10.0.16.4 22
+SSH_CONNECTION = 36.5.238.202 46211 10.0.16.4 22
 # environment
 PATH = /home/tigerwang/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # environment
@@ -79,11 +79,10 @@ GOPATH = /home/tigerwang/go
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-8d35f4d4-729c-4568-8ec5-7e29e84e4c3b.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-c5d5e7bd-0f25-45c7-857b-d4fca6ba1754.sock
 # environment
 MAVEN_BIN = /home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # default
- 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 UUID = 7cf80959-57b8-4f6e-8fb3-c9a488ad7e45
@@ -136,7 +135,7 @@ JAVA_HOME = /usr/local/jdk-17.0.2
 # makefile (from 'makefile', line 7)
 BUILD_DIR = $(PROJECT_PATH)/build
 # environment
-XDG_SESSION_ID = 44980
+XDG_SESSION_ID = 50048
 # environment
 USER = tigerwang
 # makefile
@@ -162,7 +161,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 36.5.239.174 13830 22
+SSH_CLIENT = 36.5.238.202 46211 22
 # environment
 MAIL = /var/spool/mail/tigerwang
 # automatic
@@ -280,6 +279,7 @@ clean:
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
+ 
 
 # strcache buffers: 1 (0) / strings = 21 / storage = 156 B / avg = 7 B
 # current buf: size = 8162 B / used = 156 B / count = 21 / avg = 7 B
@@ -287,6 +287,6 @@ clean:
 # strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Sun May 29 21:25:34 2022
+# Finished Make data base on Tue Jun  7 10:02:45 2022
 
  
