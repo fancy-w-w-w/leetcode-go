@@ -1,6 +1,10 @@
 package arrayhandle
 
-import "fmt"
+import (
+	"container/heap"
+	"fmt"
+	"sort"
+)
 
 func MaxSlidingWindow(nums []int, k int) []int {
 	q := []int{}
@@ -30,5 +34,24 @@ func MaxSlidingWindow(nums []int, k int) []int {
 		fmt.Println(q)
 	}
 	return ans
+
+}
+
+type hp struct{ sort.IntSlice }
+
+func (h *hp) Push(v interface{}) { h.IntSlice = append(h.IntSlice, v.(int)) }
+func (h *hp) Pop() interface{} {
+	v := h.IntSlice[len(h.IntSlice)-1]
+	h.IntSlice = h.IntSlice[:len(h.IntSlice)-1]
+	return v
+}
+
+func MaxSlidingWindow2(nums []int, k int) []int {
+	q := &hp{nums}
+	heap.Init(q)
+	for len(q.IntSlice) != 0 {
+		fmt.Println(heap.Pop(q))
+	}
+	return q.IntSlice
 
 }

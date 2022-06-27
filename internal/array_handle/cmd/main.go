@@ -7,5 +7,5 @@ import (
 
 func main() {
 
-	fmt.Println(arrayhandle.MaxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+	fmt.Println(arrayhandle.LargestRectangleArea([]int{2, 1, 5, 6, 2, 3}))
 }
