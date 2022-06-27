@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 13 10:46:49 2022
+# Make data base, printed on Mon Jun 27 21:07:31 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ CURDIR := /home/tigerwang/work/project1
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"4d12339779e8282869a6d44b7af3df1e.zh-cn","_translationsConfigFile":"/home/tigerwang/.vscode-server/data/clp/4d12339779e8282869a6d44b7af3df1e.zh-cn/tcf.json","_cacheRoot":"/home/tigerwang/.vscode-server/data/clp/4d12339779e8282869a6d44b7af3df1e.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tigerwang/.vscode-server/data/clp/4d12339779e8282869a6d44b7af3df1e.zh-cn/4af164ea3a06f701fe3e89a2bcbb421d2026b68f","_corruptedFile":"/home/tigerwang/.vscode-server/data/clp/4d12339779e8282869a6d44b7af3df1e.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"/home/tigerwang/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/tcf.json","_cacheRoot":"/home/tigerwang/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tigerwang/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/home/tigerwang/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # environment
@@ -63,9 +63,9 @@ GOPROXY = https://mirrors.aliyun.com/goproxy/,direct
 # environment
 GOMODCACHE = /home/tigerwang/go/pkg/mod
 # environment
-SSH_CONNECTION = 183.160.52.145 27609 10.0.16.4 22
+SSH_CONNECTION = 140.206.46.75 60240 10.0.16.4 22
 # environment
-PATH = /home/tigerwang/.vscode-server/bin/4af164ea3a06f701fe3e89a2bcbb421d2026b68f/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
+PATH = /home/tigerwang/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -79,7 +79,7 @@ GOPATH = /home/tigerwang/go
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-ab1b68df-5edc-4866-839d-f16fc373624f.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-61b17b61-91c2-4422-b3fa-8b0ad23ee9f8.sock
 # environment
 MAVEN_BIN = /home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # default
@@ -129,13 +129,13 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 4
+SHLVL = 3
 # environment
 JAVA_HOME = /usr/local/jdk-17.0.2
 # makefile (from 'makefile', line 7)
 BUILD_DIR = $(PROJECT_PATH)/build
 # environment
-XDG_SESSION_ID = 53635
+XDG_SESSION_ID = 61820
 # environment
 USER = tigerwang
 # makefile
@@ -161,7 +161,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 183.160.52.145 27609 22
+SSH_CLIENT = 140.206.46.75 60240 22
 # environment
 MAIL = /var/spool/mail/tigerwang
 # automatic
@@ -169,7 +169,7 @@ MAIL = /var/spool/mail/tigerwang
 # environment
 RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
 # environment
-BROWSER = /home/tigerwang/.vscode-server/bin/4af164ea3a06f701fe3e89a2bcbb421d2026b68f/bin/helpers/browser.sh
+BROWSER = /home/tigerwang/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -287,6 +287,6 @@ clean:
 # strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Mon Jun 13 10:46:49 2022
+# Finished Make data base on Mon Jun 27 21:07:31 2022
 
  

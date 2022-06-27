@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"project1/internal/wordplay"
+	arrayhandle "project1/internal/array_handle"
 )
 
 func main() {
-	fmt.Println(wordplay.LargestNumber([]int{10, 2, 9, 39, 17}))
+	fmt.Println(arrayhandle.MaxSlidingWindow2([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 }
 
 func String[T any](str ...T) {
