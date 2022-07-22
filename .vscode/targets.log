@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 21:04:32 2022
+# Make data base, printed on Fri Jul 22 16:51:27 2022
 
 # Variables
 
@@ -37,7 +37,7 @@ CURDIR := /home/tigerwang/work/project1
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"c9280508cf500dcd9c4c87fe2a1b08e9.zh-cn","_translationsConfigFile":"/home/tigerwang/.vscode-server/data/clp/c9280508cf500dcd9c4c87fe2a1b08e9.zh-cn/tcf.json","_cacheRoot":"/home/tigerwang/.vscode-server/data/clp/c9280508cf500dcd9c4c87fe2a1b08e9.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tigerwang/.vscode-server/data/clp/c9280508cf500dcd9c4c87fe2a1b08e9.zh-cn/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9","_corruptedFile":"/home/tigerwang/.vscode-server/data/clp/c9280508cf500dcd9c4c87fe2a1b08e9.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1d735750dbb1b9066c7513078396ba0f.zh-cn","_translationsConfigFile":"/home/tigerwang/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/tcf.json","_cacheRoot":"/home/tigerwang/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn","_resolvedLanguagePackCoreLocation":"/home/tigerwang/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/tigerwang/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # environment
@@ -56,12 +56,13 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 VSCODE_CWD = /home/tigerwang
 # environment
 GOPROXY = https://mirrors.aliyun.com/goproxy/,direct
+ 
 # environment
 GOMODCACHE = /home/tigerwang/go/pkg/mod
 # environment
-SSH_CONNECTION = 140.206.46.75 62412 10.0.16.4 22
+SSH_CONNECTION = 140.206.46.75 55858 10.0.16.4 22
 # environment
-PATH = /home/tigerwang/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
+PATH = /home/tigerwang/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -75,7 +76,7 @@ GOPATH = /home/tigerwang/go
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-14e0295c-a1e6-48bd-90bf-300b03d3a88e.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-9ebf9e2a-a8ed-42d6-9b9f-f0fb4031e06d.sock
 # environment
 MAVEN_BIN = /home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # default
@@ -129,7 +130,7 @@ JAVA_HOME = /usr/local/jdk-17.0.2
 # makefile (from 'makefile', line 7)
 BUILD_DIR = $(PROJECT_PATH)/build
 # environment
-XDG_SESSION_ID = 70194
+XDG_SESSION_ID = 76564
 # environment
 USER = tigerwang
 # makefile
@@ -155,7 +156,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 140.206.46.75 62412 22
+SSH_CLIENT = 140.206.46.75 55858 22
 # environment
 MAIL = /var/spool/mail/tigerwang
 # automatic
@@ -163,7 +164,7 @@ MAIL = /var/spool/mail/tigerwang
 # environment
 RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
 # environment
-BROWSER = /home/tigerwang/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/bin/helpers/browser.sh
+BROWSER = /home/tigerwang/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -278,7 +279,6 @@ clean:
 # strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Mon Jul 11 21:04:32 2022
- 
+# Finished Make data base on Fri Jul 22 16:51:27 2022
 
  
