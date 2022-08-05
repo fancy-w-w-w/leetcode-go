@@ -4,6 +4,13 @@ package dynamicresolve
 // *匹配一串字符
 // ?匹配一个字符，不能为空
 // s p 分别为目标串和模式串
+
+// 正则表达式
+/*
+	dp[i][j] = dp[i-1][j-1] // si和pj相同或者pj是？
+	dp[i][j] = dp[i][j-1] || dp[i-1][j] // pj是*
+	dp[i][j] = false // 其他情况
+*/
 func IsMatch(s string, p string) bool {
 	m, n := len(s), len(p)
 	dp := make([][]bool, m+1)
