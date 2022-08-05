@@ -1,5 +1,6 @@
 package tree
 
+// Trie树
 type Trie struct {
 	children [26]*Trie
 	isEnd    bool

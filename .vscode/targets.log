@@ -1,13 +1,12 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
- 
 # Built for x86_64-redhat-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 17:12:34 2022
+# Make data base, printed on Fri Aug  5 23:45:03 2022
 
 # Variables
 
@@ -60,7 +59,7 @@ GOPROXY = https://mirrors.aliyun.com/goproxy/,direct
 # environment
 GOMODCACHE = /home/tigerwang/go/pkg/mod
 # environment
-SSH_CONNECTION = 223.166.157.70 61528 10.0.16.4 22
+SSH_CONNECTION = 223.166.157.70 51763 10.0.16.4 22
 # environment
 PATH = /home/tigerwang/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/jdk-17.0.2/bin:/usr/local/jdk-17.0.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/:/home/tigerwang/bin:/usr/local/go/bin:/home/tigerwang/go/bin:/home/tigerwang/javatool/apache-maven-3.8.5/:/home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # environment
@@ -76,7 +75,7 @@ GOPATH = /home/tigerwang/go
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-a7068c9a-1c57-4b14-aa63-f38ec0923486.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1001/vscode-ipc-cf27324f-70d3-4cb6-a117-0f130121b826.sock
 # environment
 MAVEN_BIN = /home/tigerwang/javatool/apache-maven-3.8.5//bin/
 # default
@@ -130,7 +129,7 @@ JAVA_HOME = /usr/local/jdk-17.0.2
 # makefile (from 'makefile', line 7)
 BUILD_DIR = $(PROJECT_PATH)/build
 # environment
-XDG_SESSION_ID = 81791
+XDG_SESSION_ID = 84891
 # environment
 USER = tigerwang
 # makefile
@@ -156,7 +155,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 223.166.157.70 61528 22
+SSH_CLIENT = 223.166.157.70 51763 22
 # environment
 MAIL = /var/spool/mail/tigerwang
 # automatic
@@ -279,6 +278,7 @@ clean:
 # strcache performance: lookups = 29 / hit rate = 27%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/29=3%
-# Finished Make data base on Sun Jul 31 17:12:34 2022
+# Finished Make data base on Fri Aug  5 23:45:03 2022
+ 
 
  

@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os/exec"
+)
 
 // func main() {
 // 	var x, y, a, b int
@@ -80,7 +84,33 @@ import "fmt"
 // 	return b
 // }
 
+// func main() {
+// 	a, b, c := make(chan struct{}, 1), make(chan struct{}, 1), make(chan struct{}, 1)
+// 	wg := &sync.WaitGroup{}
+// 	wg.Add(3)
+// 	go f("a", a, b, wg)
+// 	go f("b", b, c, wg)
+// 	go f("c", c, a, wg)
+// 	a <- struct{}{}
+// 	wg.Wait()
+// }
+
+// func f(s string, in, out chan struct{}, wg *sync.WaitGroup) {
+// 	defer wg.Done()
+// 	for i := 0; i < 5; i++ {
+// 		_ = <-in
+// 		println(s)
+// 		out <- struct{}{}
+// 	}
+// }
+
 func main() {
-	ss := "0"
-	fmt.Println(ss[:0])
+	cmd := exec.Command("sh", "-c", "/home/tigerwang/work/nio-soa-converter-tool/resource/fidl-tool/fidl-tools-generator-linux-x86_64 -sf fidl -tf proto -sp /home/tigerwang/work/nio-soa-converter-tool/data/sourcefile/FrontBeam.fidl -d ./ -dv")
+	// cmd := exec.Command("sh", "-c", "ls", "-a")
+	out, err := cmd.CombinedOutput()
+	if err != nil {
+		fmt.Printf("combined out:\n%s\n", string(out))
+		log.Fatalf("cmd.Run() failed with %s\n", err)
+	}
+	fmt.Printf("combined out:\n%s\n", string(out))
 }
