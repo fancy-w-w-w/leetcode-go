@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// 比较版本号
 func CompareVersion(version1 string, version2 string) int {
 	versionAStrs := strings.Split(version1, ".")
 	versionBStrs := strings.Split(version2, ".")

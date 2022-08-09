@@ -1,6 +1,6 @@
 package tree
 
-// NumSearchTree 不同二叉搜索树，左右dp遍历
+// NumSearchTree 不同二叉搜索树个数，左右dp遍历
 func NumSearchTree(n int) int {
 	G := make([]int, n+1)
 	G[0], G[1] = 1, 1

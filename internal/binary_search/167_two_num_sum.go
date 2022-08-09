@@ -1,6 +1,7 @@
 package binarysearch
 
-// TwoSum 两数之和
+// TwoSum 两数之和2
+// 有序数组
 func TwoSum(numbers []int, target int) []int {
 	low, high := 0, len(numbers)-1
 	for low < high {

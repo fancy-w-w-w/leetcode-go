@@ -9,6 +9,8 @@ type Node struct {
 }
 
 // ConnectLevelNode 层序遍历增加Next指针
+// 填充每个节点的下一个右侧节点指针
+// 完美二叉树
 func ConnectLevelNode(root *Node) *Node {
 
 	if root == nil {
@@ -68,6 +70,7 @@ func ConnectLevelNodeV2(root *Node) *Node {
 	return root
 }
 
+//
 // 带空节点（非完全二叉树）
 func ConnectLevelNodeV3(root *Node) *Node {
 	if root == nil {

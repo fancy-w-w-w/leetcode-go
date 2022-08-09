@@ -24,7 +24,7 @@ func RestoreIpAddresses(s string) []string {
 }
 
 func dfs(segNum int, segStart int) {
-	// 如果找到了四段ip地址并且遍历玩字符串，就是一个答案
+	// 如果找到了四段ip地址并且遍历完字符串，就是一个答案
 	if segNum == SEG_COUNT && segStart == len(ipStr) {
 		ipAddr := strings.Join(segments, ".")
 		ans = append(ans, ipAddr[:len(ipAddr)-1])

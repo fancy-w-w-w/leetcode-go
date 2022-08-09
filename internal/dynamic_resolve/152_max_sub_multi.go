@@ -1,5 +1,6 @@
 package dynamicresolve
 
+// 乘积最大子数组
 // MaxProduct 动态规划解最大乘积子数组
 func MaxProduct(nums []int) int {
 	maxF, minF, ans := nums[0], nums[0], nums[0]

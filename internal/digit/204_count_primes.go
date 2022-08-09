@@ -1,6 +1,7 @@
 package digit
 
 // CountPrimes 统计质数个数，采用标记筛选法
+// 计数质数
 func CountPrimes(n int) int {
 	// 筛选
 	isPrimes := make([]bool, n)

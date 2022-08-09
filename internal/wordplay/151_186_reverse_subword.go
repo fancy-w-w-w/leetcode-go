@@ -1,6 +1,7 @@
 package wordplay
 
 // ReverseWords 逆置单词
+// 颠倒字符串中的单词
 func ReverseWords(s string) string {
 	//1.使用双指针删除冗余的空格
 	slowIndex, fastIndex := 0, 0

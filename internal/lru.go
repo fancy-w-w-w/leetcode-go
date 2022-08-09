@@ -1,5 +1,6 @@
 package internal
 
+// LRU
 type LRUCache struct {
 	capacity   int
 	m          map[int]*Node

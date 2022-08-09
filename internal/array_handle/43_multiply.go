@@ -1,5 +1,6 @@
 package arrayhandle
 
+// 字符串乘法
 // MultiplyTwoString 字符串相乘
 // 1 <= num1.length, num2.length <= 200
 func MultiplyTwoString(num1 string, num2 string) string {

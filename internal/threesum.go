@@ -2,6 +2,7 @@ package internal
 
 import "sort"
 
+// 三数之和
 func ThreeSum(nums []int) [][]int {
 	n := len(nums)
 	sort.Ints(nums)

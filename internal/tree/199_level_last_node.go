@@ -1,6 +1,6 @@
 package tree
 
-// RightSideView 二叉树右视图
+// RightSideView 二叉树的右视图
 func RightSideView(root *TreeNode) []int {
 	if root == nil {
 		return []int{}

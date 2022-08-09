@@ -39,22 +39,25 @@ func SubSetsV2(nums []int) (ans [][]int) {
 	return
 }
 
-func SubSetsWithoutDup(nums []int) (ans [][]int) {
+// 子集不重复
+// 包含重复元素 先排序
+func subsetsWithDup(nums []int) (ans [][]int) {
 	sort.Ints(nums)
-	n := len(nums)
-outer:
-	for mask := 0; mask < 1<<n; mask++ {
-		set := []int{}
-		for i, v := range nums {
-			if mask>>i&1 > 0 {
-				// 被子集选中且值相同 跳过
-				if i > 0 && mask>>(i-1)&1 == 0 && v == nums[i-1] {
-					continue outer
-				}
-				set = append(set, v)
-			}
+	t := []int{}
+	var dfs func(bool, int)
+	dfs = func(choosePre bool, cur int) {
+		if cur == len(nums) {
+			ans = append(ans, append([]int(nil), t...))
+			return
 		}
-		ans = append(ans, append([]int(nil), set...))
+		dfs(false, cur+1)
+		if !choosePre && cur > 0 && nums[cur-1] == nums[cur] {
+			return
+		}
+		t = append(t, nums[cur])
+		dfs(true, cur+1)
+		t = t[:len(t)-1]
 	}
+	dfs(false, 0)
 	return
 }

@@ -1,5 +1,6 @@
 package tree
 
+// 二叉搜索树中第K小的元素
 type MyBst struct {
 	root    *TreeNode
 	nodeNum map[*TreeNode]int // 统计以每个结点为根结点的子树的结点数，并存储在哈希表中

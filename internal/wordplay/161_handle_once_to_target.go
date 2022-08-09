@@ -5,6 +5,7 @@ package wordplay
 // 往 s 中插入 恰好一个 字符得到 t
 // 从 s 中删除 恰好一个 字符得到 t
 // 在 s 中用 一个不同的字符 替换 恰好一个 字符得到 t
+// 相隔为1的编辑距离
 func IsOneEditDistance(s string, t string) bool {
 	return isAlter([]byte(s), t) || isInsert([]byte(s), t) || isDel([]byte(s), t)
 }

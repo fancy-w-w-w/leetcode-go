@@ -28,3 +28,27 @@ func min(a, b int) int {
 	}
 	return b
 }
+
+// 最小路径和
+func minPathSum(grid [][]int) int {
+	if grid == nil {
+		return 0
+	}
+	dp := make([][]int, len(grid))
+	for k, v := range grid {
+		dp[k] = make([]int, len(v)) //初始化dp数组
+	}
+	dp[0][0] = grid[0][0] //动态规划边界
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[0]); j++ {
+			if i == 0 && j != 0 {
+				dp[i][j] = dp[i][j-1] + grid[i][j] //动态规划递推关系式
+			} else if i != 0 && j == 0 {
+				dp[i][j] = dp[i-1][j] + grid[i][j] //动态规划递推关系式
+			} else if i != 0 && j != 0 {
+				dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j] ////动态规划递推关系式
+			}
+		}
+	}
+	return dp[len(grid)-1][len(grid[0])-1]
+}

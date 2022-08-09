@@ -1,6 +1,7 @@
 package dynamicresolve
 
-func MaxProfitV3x(prices []int) int {
+// 买卖股票的最佳时机3 最多两笔交易
+func MaxProfitV3(prices []int) int {
 	dp := make([][]int, len(prices))
 	for i := 0; i < len(prices); i++ {
 		dp[i] = make([]int, 5)

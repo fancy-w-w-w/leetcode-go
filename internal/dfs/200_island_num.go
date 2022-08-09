@@ -1,5 +1,6 @@
 package dfs
 
+// 岛屿数量
 func NumIslands(grid [][]byte) int {
 	res := 0
 	var dfs func(int, int)

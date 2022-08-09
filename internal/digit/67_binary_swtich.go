@@ -2,6 +2,7 @@ package digit
 
 import "strconv"
 
+// AddBinary 二进制求和
 func AddBinary(a, b string) string {
 	if len(a) < len(b) {
 		a, b = b, a

@@ -8,6 +8,7 @@ package linkedlist
  * }
  */
 
+// 环形链表
 // 检测链表是否具有环，并返回环的位置
 func DetectCycle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

@@ -1,5 +1,6 @@
 package binarysearch
 
+// 搜索旋转排序数组
 // 无重复情况
 func SearchNum(nums []int, target int) int {
 	n := len(nums)
@@ -29,6 +30,7 @@ func SearchNum(nums []int, target int) int {
 	return -1
 }
 
+// 搜索旋转排序数组
 // 有重复情况
 /*
 对于数组中有重复元素的情况，二分查找时可能会有 a[l]=a[\textit{mid}]=a[r]a[l]=a[mid]=a[r]，此时无法判断区间 [l,\textit{mid}][l,mid] 和区间 [\textit{mid}+1,r][mid+1,r] 哪个是有序的。

@@ -1,5 +1,6 @@
 package linkedlist
 
+// 重排链表
 // middleNode 快慢指针得到中间节点（前半部分最后一个尾节点）
 func middleNode(head *ListNode) *ListNode {
 	slow, fast := head, head

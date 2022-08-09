@@ -3,6 +3,7 @@ package tree
 import "project1/internal/linkedlist"
 
 // sortedListToBST 将有序链表转换为二叉平衡搜索树
+// 有序链表转换二叉搜索树
 func SortedListToBST(head *linkedlist.ListNode) *TreeNode {
 	globalHead := head
 	var length int

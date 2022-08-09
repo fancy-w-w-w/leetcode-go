@@ -53,6 +53,7 @@ func MinWindow(s string, t string) string {
 
 }
 
+// 最小覆盖子串
 func MinWindowV2(s string, t string) string {
 	ori, cnt := map[byte]int{}, map[byte]int{}
 	for i := 0; i < len(t); i++ {

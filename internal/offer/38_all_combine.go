@@ -8,7 +8,7 @@ func reverse(a []byte) {
 	}
 }
 
-// 下一个更大排列
+// 下一个排列
 func nextPermutation(nums []byte) bool {
 	n := len(nums)
 	i := n - 2

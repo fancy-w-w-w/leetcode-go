@@ -10,6 +10,7 @@ package tree
  */
 
 // BuildTree 前序和中序构造二叉树
+// 构建二叉树
 func BuildTreeV1(preorder []int, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
@@ -31,6 +32,7 @@ func BuildTreeV1(preorder []int, inorder []int) *TreeNode {
 }
 
 // 中序和后序建立二叉树
+// 构建二叉树
 // BuildTreeV2
 func BuildTreeV2(inorder []int, postorder []int) *TreeNode {
 	indexStore := make(map[int]int, len(inorder))
