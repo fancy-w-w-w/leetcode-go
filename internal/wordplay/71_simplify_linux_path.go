@@ -7,6 +7,7 @@ import (
 	"github.com/emirpasic/gods/stacks/arraystack"
 )
 
+// 简化路径
 // SimplifyPath 化简Linux绝对路径
 func SimplifyPath(path string) string {
 	stack := arraystack.New()
@@ -47,6 +48,7 @@ func SimplifyPath(path string) string {
 	return "/" + res[:len(res)-1]
 }
 
+// 简化路径
 func SimplifyPathV2(path string) string {
 	stack := []string{}
 	for _, name := range strings.Split(path, "/") {

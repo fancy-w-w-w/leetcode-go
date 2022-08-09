@@ -4,6 +4,7 @@ import "fmt"
 
 // RemoveDuplicates 每个元素最多出现k次，有序数组
 // return 数组长度
+// 删除有序数组的重复项
 func RemoveDuplicates(nums []int, k int) int {
 	n := len(nums)
 	if n <= k {

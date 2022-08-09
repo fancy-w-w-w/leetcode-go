@@ -1,6 +1,7 @@
 package tree
 
 // GenerateTrees 生成所有可能的二叉搜索树 1~n
+// 不同的二叉搜索树
 func GenerateTrees(n int) []*TreeNode {
 	if n == 0 {
 		return nil

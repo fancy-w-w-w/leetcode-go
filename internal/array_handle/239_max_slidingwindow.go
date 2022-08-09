@@ -6,6 +6,7 @@ import (
 	"sort"
 )
 
+// 最大滑动窗口
 func MaxSlidingWindow(nums []int, k int) []int {
 	q := []int{}
 	push := func(i int) {

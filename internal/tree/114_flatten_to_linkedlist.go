@@ -1,6 +1,7 @@
 package tree
 
 // Flatten 将二叉树原地展开为链表
+// 二叉树展开为链表
 func Flatten(root *TreeNode) {
 	cur := root
 

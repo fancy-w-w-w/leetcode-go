@@ -1,6 +1,7 @@
 package linkedlist
 
 // DeleteDuplicates 删除重复节点
+// 删除排序链表中的重复元素
 func DeleteDuplicates(head *ListNode) *ListNode {
 	if head == nil {
 		return nil

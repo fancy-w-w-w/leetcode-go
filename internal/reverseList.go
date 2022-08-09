@@ -7,6 +7,8 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 反转链表
+// 反转指定位置链表
 func ReverseBetween(head *ListNode, left int, right int) *ListNode {
 	needReverseNum := left - right
 	if needReverseNum == 0 {

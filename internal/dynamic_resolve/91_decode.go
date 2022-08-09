@@ -1,6 +1,7 @@
 package dynamicresolve
 
 // numDecoding 求字符映射成num数组过后，复原有多少种串
+// 解码方法
 func NumDecoding(s string) int {
 	dp := make([]int, len(s)+1)
 

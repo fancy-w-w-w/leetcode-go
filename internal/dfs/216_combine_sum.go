@@ -4,6 +4,7 @@ package dfs
 // 找出所有相加之和为 n 的 k 个数的组合，且满足下列条件：
 // 只使用数字1到9
 // 每个数字 最多使用一次
+// 组合总和3
 func CombinationSum3(k int, n int) [][]int {
 	res := make([][]int, 0)
 	var dfs func([]int, int, int)

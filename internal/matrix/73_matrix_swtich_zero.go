@@ -1,29 +1,44 @@
 package matrix
 
 // SetZeros 矩阵置零 让所有的与0相连的行列都置零
-func SetZeros(matrix [][]int) {
+func SetZeroes(matrix [][]int) {
 	n, m := len(matrix), len(matrix[0])
-	// 标记第一列有没有0，如果有需要特殊处理
-	col0 := false
+	row0, col0 := false, false
+	for _, v := range matrix[0] {
+		if v == 0 {
+			row0 = true
+			break
+		}
+	}
 	for _, r := range matrix {
 		if r[0] == 0 {
 			col0 = true
+			break
 		}
+	}
+	for i := 1; i < n; i++ {
 		for j := 1; j < m; j++ {
-			if r[j] == 0 {
-				r[0] = 0
+			if matrix[i][j] == 0 {
+				matrix[i][0] = 0
 				matrix[0][j] = 0
 			}
 		}
 	}
-	for i := n - 1; i >= 0; i-- {
+	for i := 1; i < n; i++ {
 		for j := 1; j < m; j++ {
 			if matrix[i][0] == 0 || matrix[0][j] == 0 {
 				matrix[i][j] = 0
 			}
 		}
-		if col0 {
-			matrix[i][0] = 0
+	}
+	if row0 {
+		for j := 0; j < m; j++ {
+			matrix[0][j] = 0
+		}
+	}
+	if col0 {
+		for _, r := range matrix {
+			r[0] = 0
 		}
 	}
 }

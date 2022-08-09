@@ -1,5 +1,6 @@
 package digit
 
+// 多数元素
 func MajorityElement(nums []int) int {
 
 	var amount int

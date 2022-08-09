@@ -3,6 +3,7 @@ package arrayhandle
 import "fmt"
 
 // FindMissingRanges 给定一个排序的整数数组 nums ，其中元素的范围在 闭区间 [lower, upper] 当中，返回不包含在数组中的缺失区间。
+// 缺失的区间
 func FindMissingRanges(nums []int, lower int, upper int) []string {
 	preStart := lower
 	res := []string{}

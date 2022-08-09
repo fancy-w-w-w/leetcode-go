@@ -1,5 +1,6 @@
 package dynamicresolve
 
+// 杨辉三角
 func GenerateYangHui(numsRow int) [][]int {
 	ans := make([][]int, numsRow)
 	for i := range ans {
@@ -14,6 +15,7 @@ func GenerateYangHui(numsRow int) [][]int {
 
 }
 
+// 杨辉三角2
 // GenerateYangHuiV2 获得指定层的杨辉三角数组
 func GenerateYangHuiV2(numsRow int) []int {
 	res := make([]int, numsRow+1)

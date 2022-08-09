@@ -1,6 +1,7 @@
 package dynamicresolve
 
-// IsInterleave 交错二叉树
+// IsInterleave 交错字符串
+//
 func IsInterleave(s1 string, s2 string, s3 string) bool {
 	n, m, t := len(s1), len(s2), len(s3)
 	if (n + m) != t {

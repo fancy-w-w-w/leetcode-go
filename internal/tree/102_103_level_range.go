@@ -31,6 +31,7 @@ func (q *Queue) IsEmpty() any {
 	return q.rear <= q.head
 }
 
+// 层序遍历
 func LevelOrder(root *TreeNode) [][]int {
 	//定义一个存储结果的二维切片
 	var res [][]int

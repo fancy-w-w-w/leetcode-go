@@ -6,6 +6,7 @@ type pair struct {
 
 var movePath = []pair{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
 
+// 矩阵单词搜索
 // ExistWord 矩阵是否存在模式字符串
 func ExistWord(board [][]byte, word string) bool {
 	h, w := len(board), len(board[0])

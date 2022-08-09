@@ -4,6 +4,7 @@ import "math"
 
 // IsValidBST 验证是否是二叉搜索树
 // 局部最优解，向左寻找时缩短上区间，👉寻找时缩短下区间
+// 验证二叉搜索树
 func IsValidBST(root *TreeNode) bool {
 	var dfs func(*TreeNode, int, int) bool
 	dfs = func(root *TreeNode, morethan int, lessthan int) bool {

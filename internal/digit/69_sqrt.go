@@ -1,5 +1,6 @@
 package digit
 
+// MySqrt x的平方根
 func MySqrt(x int) int {
 	l, r := 0, x
 	ans := -1

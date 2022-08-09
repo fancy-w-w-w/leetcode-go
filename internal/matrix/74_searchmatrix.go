@@ -1,5 +1,6 @@
 package matrix
 
+// 搜索二维矩阵
 // SearchMatrix 快速搜索有序二维数组找到target
 func SearchMatrix(matrix [][]int, target int) bool {
 	row, line := len(matrix)-1, len(matrix[0])-1

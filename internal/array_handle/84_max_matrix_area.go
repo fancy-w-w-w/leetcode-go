@@ -3,6 +3,7 @@ package arrayhandle
 // LargestRectangleArea
 // 柱状图中最大的矩形
 // 点掉栈
+// 最大矩形
 func LargestRectangleArea(heights []int) int {
 	// stack递增的
 	stack := []int{0}

@@ -2,6 +2,8 @@ package arrayhandle
 
 import "math"
 
+// 长度最小的子数组
+// 滑动窗口
 func MinSubArrayLen(target int, nums []int) int {
 	n := len(nums)
 	res := math.MaxInt
