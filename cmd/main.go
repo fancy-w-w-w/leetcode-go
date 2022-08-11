@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"project1/internal/linkedlist"
+)
+
 // 字符串输入
 // func main() {
 // 	reader := bufio.NewReader(os.Stdin)
@@ -271,6 +276,8 @@ package main
 // 	fmt.Println(shuru)
 // 	return res
 // }
+
 func main() {
+	fmt.Println(linkedlist.MergeKLists([]*linkedlist.ListNode{}))
 
 }
