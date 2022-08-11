@@ -29,6 +29,7 @@ func (Codec) serialize(root *TreeNode) string {
 	return sb.String()
 }
 
+// 二叉树反序列化
 func (Codec) deserialize(data string) *TreeNode {
 	sp := strings.Split(data, ",")
 	var build func() *TreeNode
