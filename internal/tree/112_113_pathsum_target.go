@@ -10,7 +10,7 @@ package tree
  */
 
 // HasPathSum
-// 路经总和
+// 二叉树路经总和
 func HasPathSum(root *TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
@@ -22,7 +22,7 @@ func HasPathSum(root *TreeNode, targetSum int) bool {
 }
 
 // TreePathSum 路径和路径记录
-// 路径总和
+// 二叉树路径总和
 func TreePathSum(root *TreeNode, targetSum int) [][]int {
 	res := make([][]int, 0)
 	singleRound := make([]int, 0)

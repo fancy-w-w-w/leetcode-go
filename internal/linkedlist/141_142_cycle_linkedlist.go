@@ -10,6 +10,11 @@ package linkedlist
 
 // 环形链表
 // 检测链表是否具有环，并返回环的位置
+// 任意时刻，\textit{fast}fast 指针走过的距离都为 \textit{slow}slow 指针的 22 倍。因此，我们有
+
+// a+(n+1)b+nc=2(a+b) \implies a=c+(n-1)(b+c)
+// a+(n+1)b+nc=2(a+b)⟹a=c+(n−1)(b+c)
+
 func DetectCycle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return nil

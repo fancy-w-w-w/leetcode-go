@@ -1,7 +1,7 @@
 package dynamicresolve
 
 // IsInterleave 交错字符串
-//
+// 给定三个字符串 s1、s2、s3，请你帮忙验证 s3 是否是由 s1 和 s2 交错 组成的。
 func IsInterleave(s1 string, s2 string, s3 string) bool {
 	n, m, t := len(s1), len(s2), len(s3)
 	if (n + m) != t {

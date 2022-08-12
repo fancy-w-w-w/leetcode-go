@@ -54,6 +54,7 @@ func MinWindow(s string, t string) string {
 }
 
 // 最小覆盖子串
+// 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
 func MinWindowV2(s string, t string) string {
 	ori, cnt := map[byte]int{}, map[byte]int{}
 	for i := 0; i < len(t); i++ {

@@ -6,6 +6,7 @@ import (
 )
 
 // MaxPathSum 二叉树最大路径和
+// 从树中任意节点出发，沿父节点-子节点连接，达到任意节点的序列
 func MaxPathSum(root *tree.TreeNode) int {
 	res := math.MinInt
 	var dfs func(root *tree.TreeNode) int

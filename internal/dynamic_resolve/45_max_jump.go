@@ -16,3 +16,22 @@ func Jump(nums []int) int {
 	}
 	return steps
 }
+
+// 跳跃游戏
+func canJump(nums []int) bool {
+	n := len(nums)
+	maxPos := 0
+	for i := range nums {
+		if i > maxPos {
+			break
+		}
+		if i+nums[i] > maxPos {
+			maxPos = i + nums[i]
+		}
+		if maxPos >= n-1 {
+			return true
+		}
+
+	}
+	return false
+}
