@@ -28,7 +28,7 @@ func CanPartitionKSubsets(nums []int, k int) bool {
 	used := make([]bool, n)
 
 	var dfs func(int, int, int) bool
-
+	// start-当前下标 k-第k个子集 cursum-当前子集的总和
 	dfs = func(start int, k int, cursum int) bool {
 
 		if k == 0 {

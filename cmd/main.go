@@ -2,8 +2,120 @@ package main
 
 import (
 	"fmt"
-	"project1/internal/linkedlist"
+	"sync"
 )
+
+func main() {
+	// channel 初始化
+	c := make(chan int, 10)
+	// 用来 recevivers 同步事件的
+	wg := sync.WaitGroup{}
+
+	// sender（写端）
+	go func() {
+		// 入队
+		c <- 1
+		// ...
+		// 满足某些情况，则 close channel
+		close(c)
+	}()
+
+	// receivers （读端）
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			// ... 处理 channel 里的数据
+			for v := range c {
+				mm := v
+				fmt.Println(mm)
+			}
+		}()
+	}
+	// 等待所有的 receivers 完成；
+	wg.Wait()
+}
+
+// func main() {
+// 	ss := Solution("0000")
+// 	fmt.Println(ss)
+// }
+// func Solution(S string) string {
+// 	// write your code in Go (Go 1.4)
+// 	map1 := make(map[int]int, 10)
+// 	for i := range S {
+// 		map1[int(S[i]-'0')]++
+// 	}
+// 	res := []byte{}
+// 	for i := 9; i >= 0; i-- {
+// 		if v, ok := map1[i]; ok && v > 1 {
+// 			num := v / 2
+// 			v %= 2
+// 			map1[i] = v
+// 			ss := []byte(strings.Repeat(string([]byte{byte('0' + i)}), num))
+// 			res = append(ss, res...)
+
+// 		}
+// 	}
+
+// 	var isInsert bool = false
+// 	for j := 9; j >= 0; j-- {
+// 		if v, ok := map1[j]; ok && v == 1 {
+// 			res = append(res, byte('0'+j))
+// 			isInsert = true
+// 			break
+// 		}
+// 	}
+
+// 	if isInsert {
+// 		res = append(res, res[:len(res)-1]...)
+// 	} else {
+// 		res = append(res, res...)
+// 	}
+// 	lenOrigin := len(res)
+
+// 	ss1 := strings.TrimLeft(string(res), "0")
+// 	ss2 := strings.TrimRight(ss1, "0")
+// 	// 特殊 "0000"
+// 	if len(ss2) == 0 && lenOrigin != 0 {
+// 		ss2 = "0"
+// 	}
+// 	return ss2
+// }
+
+// func main() {
+// 	X := []int{4, 8, 2, 2, 1, 4}
+// 	Y := []int{1, 2, 3, 1, 2, 3}
+// 	W := 3
+// 	fmt.Println(Solution(X, Y, W))
+// }
+
+// func Solution(X []int, Y []int, W int) int {
+// 	// write your code in Go (Go 1.4)
+// 	if len(X) == 0 {
+// 		return 0
+// 	}
+// 	sort.Ints(X)
+
+// 	res := 0
+// 	i := 0
+// 	for i < len(X) {
+// 		nextIndex := X[i] + W
+// 		nexti := i
+// 		j := i
+// 		for ; j < len(X); j++ {
+// 			if X[j] <= nextIndex {
+// 				continue
+// 			}
+// 			break
+// 		}
+// 		nexti = j
+// 		i = nexti
+// 		res++
+// 	}
+// 	return res
+
+// }
 
 // 字符串输入
 // func main() {
@@ -277,7 +389,213 @@ import (
 // 	return res
 // }
 
-func main() {
-	fmt.Println(linkedlist.MergeKLists([]*linkedlist.ListNode{}))
+// func main() {
+// 	nums := []int{3, 0, 5}
+// 	fmt.Println(Solution(nums))
+// }
 
-}
+// func Solution(A []int) int {
+// 	// write your code in Go (Go 1.4)
+// 	var totalWuran float32 = 0
+// 	res := 0
+// 	nums := make([]float32, len(A))
+// 	for i := range A {
+// 		nums[i] = float32(A[i])
+// 		totalWuran += float32(A[i])
+// 	}
+
+// 	hp1 := &hp{
+// 		array: nums,
+// 	}
+// 	heap.Init(hp1)
+
+// 	nowWuran := totalWuran
+// 	// 除2减半，作为跳出条件
+// 	totalWuran /= 2
+// 	for nowWuran > totalWuran {
+// 		v := heap.Pop(hp1).(float32)
+// 		nowWuran -= v / 2
+// 		heap.Push(hp1, v/2)
+// 		res++
+// 	}
+
+// 	return res
+// }
+
+// type hp struct {
+// 	array []float32
+// }
+
+// func (h *hp) Len() int {
+// 	return len(h.array)
+// }
+
+// func (h *hp) Less(i, j int) bool {
+// 	return h.array[i] > h.array[j]
+// }
+
+// func (h *hp) Swap(i, j int) {
+// 	h.array[i], h.array[j] = h.array[j], h.array[i]
+// }
+
+// func (h *hp) Push(x any) {
+// 	h.array = append(h.array, x.(float32))
+// }
+
+// func (h *hp) Pop() any {
+// 	res := h.array[len(h.array)-1]
+// 	h.array = h.array[:len(h.array)-1]
+// 	return res
+// }
+
+// func main() {
+
+// }
+
+// func Solution(X []int, Y []int) int {
+// 	// write your code in Go (Go 1.4)
+
+// 	dp := make([][][]float32, len(X)+1)
+// 	for i := range dp {
+// 		dp[i] = make([][]float32, len(Y)+1)
+// 		for j := range dp[j] {
+// 			dp[i][j] = make([]float32, len(X)+1)
+// 		}
+// 	}
+
+// 	for j := range Y {
+// 		dp[0][j][0] = float32(X[0] / Y[j])
+// 	}
+
+// 	for i := 1; i < len(X); i++ {
+// 		for k := 0; k < i; k++ {
+// 			for j := 0; j < len(Y); j++ {
+// 				dp[k][j][i] = 1
+// 			}
+// 		}
+// 	}
+// }
+
+// func max(a, b int) int {
+// 	if a > b {
+// 		return a
+// 	}
+// 	return b
+// }
+
+// func main() {
+// 	// x := []int{1, 2, 3, 1, 2, 12, 8, 4}
+// 	// y := []int{5, 10, 15, 2, 4, 15, 10, 5}
+
+// 	x := []int{1, 1, 1}
+// 	y := []int{2, 2, 2}
+// 	fmt.Println(Solution(x, y))
+// }
+
+// func Solution(X []int, Y []int) int {
+// 	if len(X) == 0 {
+// 		return 0
+// 	}
+// 	// 排序去冲
+// 	// sort.Ints(X)
+// 	sort.Ints(Y)
+// 	visited := make([]bool, len(Y))
+// 	dp := make([][]float32, len(X)+1)
+// 	for i := range dp {
+// 		dp[i] = make([]float32, len(Y)+1)
+// 	}
+
+// 	for i := range X {
+// 		for j := range Y {
+// 			dp[i][j] = float32(X[i]) / float32(Y[j])
+// 		}
+// 	}
+
+// 	res := 0
+// 	var dfs func(fenziIndex int, target float32)
+// 	dfs = func(fenziIndex int, target float32) {
+// 		if target == 0 {
+// 			// fmt.Println(fenziIndex)
+// 			res++
+// 			return
+// 		} else if target < 0 {
+// 			fmt.Println(fenziIndex, target)
+// 			return
+// 		}
+// 		if fenziIndex >= len(X) {
+// 			return
+// 		}
+
+// 		for i := fenziIndex; i < len(X); i++ {
+// 			if
+// 			for j := range Y {
+// 				if j > 0 && Y[j] == Y[j-1] {
+// 					continue
+// 				}
+// 				if visited[j] {
+// 					continue
+// 				}
+// 				visited[j] = true
+// 				target -= dp[i][j]
+// 				dfs(fenziIndex+1, target)
+// 				visited[j] = false
+// 				target += dp[i][j]
+// 			}
+// 			go dfs(fenziIndex+1, target)
+// 		}
+// 	}
+// 	dfs(0, 1)
+// 	return res
+// }
+
+// func main() {
+// 	go func() {
+// 		log.Println(http.ListenAndServe("localhost:6060", nil))
+// 	}()
+
+// 	time.Sleep(time.Second)
+// 	c := make(chan bool)
+// 	<-c
+// }
+
+// func main() {
+// 	n := 60000000
+// 	tt := time.Date(2008, time.January, 1, 0, 0, 0, 0, time.UTC)
+// 	tt = tt.Add(time.Second * time.Duration(n))
+// 	fmt.Println(tt.Format(time.UnixDate))
+// }
+
+// func main() {
+// 	// lis1 := &linkedlist.ListNode{
+// 	// 	Val: 1,
+// 	// 	Next: &linkedlist.ListNode{
+// 	// 		Val: 2,
+// 	// 		Next: &linkedlist.ListNode{
+// 	// 			Val:  3,
+// 	// 			Next: nil,
+// 	// 		},
+// 	// 	},
+// 	// }
+
+// 	// lis2 := &linkedlist.ListNode{
+// 	// 	Val: 2,
+// 	// 	Next: &linkedlist.ListNode{
+// 	// 		Val: 1,
+// 	// 		Next: &linkedlist.ListNode{
+// 	// 			Val:  3,
+// 	// 			Next: nil,
+// 	// 		},
+// 	// 	},
+// 	// }
+// 	// res := specialquestion.SubtractionByLinkedlist(lis1, lis2)
+// 	// for res != nil {
+// 	// 	fmt.Println(res.Val)
+// 	// 	res = res.Next
+// 	// }
+// 	http.HandleFunc("/", Test1)
+// 	http.ListenAndServe(":4399", nil)
+// }
+
+// func Test1(w http.ResponseWriter, r *http.Request) {
+// 	fmt.Println("success")
+// }

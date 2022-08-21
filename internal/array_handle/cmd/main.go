@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 type person struct {
@@ -53,10 +52,35 @@ func main() {
 	// end
 	// return scores`
 	// fmt.Println(script)
+	fmt.Println(f1([]int{1, 3, 4, 3, 3, 2, 4, 4}, 4))
+}
 
-	ss := &strings.Builder{}
+func f1(arr []int, v int) int {
+	left := 0
+	right := len(arr) - 1
+	for left <= right {
+		mid := (left + right) / 2
+		if arr[mid] < v {
+			left = mid + 1
+		} else if arr[mid] > v {
+			right = mid - 1
+		} else {
+			return mid
+		}
+	}
+	return -1
+}
 
-	ss.WriteString("???")
-	ss.WriteByte('w')
-	fmt.Println(ss.String())
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
