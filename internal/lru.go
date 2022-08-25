@@ -7,6 +7,7 @@ type LRUCache struct {
 	head, tail *Node
 }
 
+// 双向链表
 type Node struct {
 	key       int
 	value     int

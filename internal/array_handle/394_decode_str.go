@@ -1,6 +1,9 @@
 package arrayhandle
 
+import "strings"
+
 // dfs使用全局变量
+// 字符串解码
 func DecodeString(s string) string {
 	i = 0
 	return run(s)
@@ -19,9 +22,9 @@ func run(s string) string {
 		} else if s[i] == '[' {
 			i++
 			tmp := run(s)
-			for j := 0; j < num; j++ {
-				res += tmp
-			}
+
+			res += strings.Repeat(tmp, num)
+
 			num = 0
 		} else {
 			break

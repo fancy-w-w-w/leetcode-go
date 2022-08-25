@@ -1,40 +1,169 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-)
+// func main() {
+// 	// a := []int{-1, 1, 3, 3, 3, 2, 3, 2, 3, 2, 1, 0}
+// 	a := make([]int, 10000)
+// 	for i := range a {
+// 		a[i] = 2
+// 	}
+// 	fmt.Println(Solution(a))
+// }
 
-func main() {
-	// channel 初始化
-	c := make(chan int, 10)
-	// 用来 recevivers 同步事件的
-	wg := sync.WaitGroup{}
+// func Solution(A []int) int64 {
+// 	// write your code in Go (Go 1.4)
+// 	if len(A) <= 2 {
+// 		return 0
+// 	}
+// 	window := []int{A[0]}
+// 	res := 0
+// 	for i := 1; i < len(A); i++ {
+// 		for len(window) > 1 && A[i]-window[len(window)-1] != window[1]-window[0] {
+// 			window = window[1:]
+// 		}
+// 		window = append(window, A[i])
+// 		if len(window) >= 3 {
+// 			res++
+// 		}
+// 	}
+// 	n := len(window) - 3
+// 	fmt.Println(n)
+// 	var v int64
+// 	for k := int64(1); k < int64(n); k++ {
+// 		a := int64(1)
+// 		b := int64(1)
+// 		c := int64(1)
+// 		fmt.Println(c)
+// 		for j := k; j > 0; j-- {
+// 			a *= j
+// 			b *= int64(n) - int64(j)
+// 		}
+// 		for h := int64(n); h > 0; h-- {
+// 			c *= h
+// 		}
+// 		fmt.Println(a, b, c)
+// 		d := a / (b * c)
+// 		v += d
+// 	}
+// 	return v
+// }
 
-	// sender（写端）
-	go func() {
-		// 入队
-		c <- 1
-		// ...
-		// 满足某些情况，则 close channel
-		close(c)
-	}()
+// func main() {
+// 	// fmt.Println(Solution(-5000))
+// 	s := make([]int, 100000)
+// 	// s := []int{2, -2, 3, 0, 4, -7}
+// 	// s = []int{0, 3, 0}
+// 	fmt.Println(Solution(s))
+// }
 
-	// receivers （读端）
-	for i := 0; i < 10; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			// ... 处理 channel 里的数据
-			for v := range c {
-				mm := v
-				fmt.Println(mm)
-			}
-		}()
-	}
-	// 等待所有的 receivers 完成；
-	wg.Wait()
-}
+// const m = 1000000000
+
+// func Solution(A []int) int {
+// 	res := 0
+// 	preSum := make([]int, len(A))
+// 	preSum[0] = A[0]
+// 	for i := 1; i < len(A); i++ {
+// 		preSum[i] = A[i] + preSum[i-1]
+// 	}
+
+// 	postSum := make([]int, len(A))
+// 	postSum[len(A)-1] = A[len(A)-1]
+// 	for i := len(A) - 2; i >= 0; i-- {
+// 		postSum[i] = A[i] + postSum[i+1]
+// 	}
+// 	// fmt.Println(preSum, postSum)
+// 	for i := 1; i < len(A); i++ {
+// 		if preSum[i] == 0 {
+// 			res++
+// 			// fmt.Println(i)
+// 		}
+// 		for j := i - 1; j >= 0; j-- {
+// 			if preSum[i]-preSum[j] == 0 {
+// 				res++
+// 				// fmt.Println(i, j)
+// 			}
+// 		}
+// 		for k := i + 2; k < len(A); k++ {
+// 			if postSum[i]-postSum[k] == 0 {
+// 				res++
+// 				// fmt.Println(i, k)
+// 			}
+// 		}
+// 		if res >= m {
+// 			return -1
+// 		}
+// 	}
+
+// 	return res
+// }
+
+// func Solution(A []int) int {
+// 	// write your code in Go (Go 1.4)
+// 	var res int = 0
+// 	preSum := make([]int, len(A))
+// 	//前缀和
+// 	preSum[0] = 0
+// 	for i := 1; i < len(A); i++ {
+// 		preSum[i] = A[i-1] + preSum[i-1]
+// 	}
+
+// 	// 后缀和
+// 	postSum := make([]int, len(A))
+// 	postSum[len(A)-1] = 0
+// 	for i := len(A) - 2; i >= 0; i-- {
+// 		postSum[i] = A[i+1] + postSum[i+1]
+// 	}
+// 	// fmt.Println(postSum)
+// 	// 首位元素剪掉
+// 	res -= 2
+// 	var sum int64 = 0
+// 	for i := range A {
+// 		sum += int64(A[i])
+// 		if A[i] == 0 {
+// 			res++
+// 		}
+// 		if preSum[i]+A[i] == 0 {
+// 			res++
+// 		}
+// 		if postSum[i]+A[i] == 0 {
+// 			res++
+// 		}
+// 		fmt.Println(i, res, preSum[i], postSum[i])
+// 		if res >= m {
+// 			return -1
+// 		}
+// 	}
+// 	if sum == 0 {
+// 		res++
+// 	}
+// 	if res >= m {
+// 		return -1
+// 	}
+// 	return res
+// }
+
+// func Solution(N int) int {
+// 	// write your code in Go (Go 1.4)
+// 	if N == 0 {
+// 		return 0
+// 	}
+// 	res := math.MinInt
+// 	ss := strconv.Itoa(N)
+// 	for i := range ss {
+// 		if ss[i] == '5' {
+// 			tmp := ss[:i] + ss[i+1:]
+// 			v, _ := strconv.Atoi(tmp)
+// 			res = max(res, v)
+// 		}
+// 	}
+// 	return res
+// }
+
+// func max(a, b int) int {
+// 	if a > b {
+// 		return a
+// 	}
+// 	return b
+// }
 
 // func main() {
 // 	ss := Solution("0000")

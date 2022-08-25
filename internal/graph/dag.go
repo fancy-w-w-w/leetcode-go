@@ -59,6 +59,8 @@ func (g *Graph) RemoveEdge(from, to string) bool {
 	return true
 }
 
+// DAG拓扑排序
+// 有向无环图判断是否有环
 func (g *Graph) Toposort() ([]string, bool) {
 	// L为输出数组
 	L := make([]string, 0, len(g.nodes))

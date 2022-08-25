@@ -19,12 +19,14 @@ func SortLinkedList(head *ListNode) *ListNode {
 			}
 
 			head2 := cur.Next
+			// cur为前一个链表尾节点
 			cur.Next = nil
 			cur = head2
 			for i := 1; i < subLength && cur != nil && cur.Next != nil; i++ {
 				cur = cur.Next
 			}
 
+			// 下次循环的开始头结点
 			var next *ListNode
 			if cur != nil {
 				next = cur.Next
@@ -33,6 +35,7 @@ func SortLinkedList(head *ListNode) *ListNode {
 
 			prev.Next = mergeReRankList(head1, head2)
 
+			// prev为前一次归并尾节点
 			for prev.Next != nil {
 				prev = prev.Next
 			}

@@ -24,7 +24,7 @@ func canPartition(nums []int) bool {
 	var dp [][]bool //dp[i][j] 表示： 前i个石头是否总和不大于J
 	//初始化数组
 	dp = make([][]bool, len(nums)+1)
-	for i, _ := range dp {
+	for i := range dp {
 		dp[i] = make([]bool, sum+1)
 		dp[i][0] = true
 	}

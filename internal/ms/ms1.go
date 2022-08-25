@@ -1,5 +1,10 @@
 package ms
 
+import (
+	"math"
+	"strings"
+)
+
 // 构成交替字符串
 // 构成交替字符串需要的最小交换次数
 // public int minSwaps(String s) {
@@ -43,3 +48,29 @@ package ms
 //     }
 //     return count;
 // }
+
+// 构成交替字符串需要的最小交换次数
+func minSwaps(s string) int {
+	ans := math.MaxInt
+	f := func(tar string) {
+		if strings.Count(tar, "0") != strings.Count(s, "0") {
+			return
+		}
+		c := 0
+		for i := range s {
+			if s[i] == '1' && tar[i] == '0' {
+				c++
+			}
+		}
+		if c < ans {
+			ans = c
+		}
+	}
+	n := len(s)
+	f(strings.Repeat("10", n)[:n])
+	f(strings.Repeat("01", n)[:n])
+	if ans == math.MaxInt {
+		return -1
+	}
+	return ans
+}

@@ -22,10 +22,12 @@ func LowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	leftNode := LowestCommonAncestor(root.Left, p, q)
 	rightNode := LowestCommonAncestor(root.Right, p, q)
 
+	// 在一边
 	if leftNode != nil && rightNode != nil {
 		return root
 	}
 
+	// 两个节点在两边
 	if leftNode != nil {
 		return leftNode
 	}

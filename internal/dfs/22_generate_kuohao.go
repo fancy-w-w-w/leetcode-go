@@ -8,6 +8,9 @@ func GenerateParenthesis(n int) []string {
 		if len(path) == 2*n {
 			res = append(res, string(path))
 		}
+		if rightNum > leftNum {
+			return
+		}
 
 		if leftNum < n {
 			path = append(path, '(')
