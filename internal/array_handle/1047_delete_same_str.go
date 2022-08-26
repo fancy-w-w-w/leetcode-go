@@ -1,5 +1,6 @@
 package arrayhandle
 
+//
 func RemoveDuplicates(s string) string {
 	if len(s) == 0 {
 		return s

@@ -1,6 +1,8 @@
 package arrayhandle
 
 // MajorityElement 超过1/3个的出现的数
+// 多数元素2
+// 摩尔投票法
 func MajorityElement(nums []int) (ans []int) {
 	element1, element2 := 0, 0
 	vote1, vote2 := 0, 0

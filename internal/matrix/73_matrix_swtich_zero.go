@@ -1,6 +1,8 @@
 package matrix
 
 // SetZeros 矩阵置零 让所有的与0相连的行列都置零
+// 我们可以用矩阵的第一行和第一列代替方法一中的两个标记数组，以达到 O(1)O(1) 的额外空间。但这样会导致原数组的第一行和第一列被修改，无法记录它们是否原本包含 00。因此我们需要额外使用两个标记变量分别记录第一行和第一列是否原本包含 00
+
 func SetZeroes(matrix [][]int) {
 	n, m := len(matrix), len(matrix[0])
 	row0, col0 := false, false
