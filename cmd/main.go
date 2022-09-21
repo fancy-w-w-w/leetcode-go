@@ -1,5 +1,204 @@
 package main
 
+import (
+	"fmt"
+)
+
+func main() {
+	var n, m int
+	fmt.Scanf("%d %d", &n, &m)
+
+	nums := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&nums[i])
+	}
+
+	res := make([]byte, n)
+	isSelect := make([]bool, n)
+	slectNum := 0
+	teamA := true
+
+	for slectNum < n {
+		var byteChar byte = 'B'
+		if teamA {
+			byteChar = 'A'
+		}
+
+		var tmp int = 0
+		var tmpindex int = 0
+		for i := range nums {
+			if isSelect[i] == true {
+				continue
+			}
+			if nums[i] > tmp {
+				tmp = nums[i]
+				tmpindex = i
+			}
+		}
+		res[tmpindex] = byteChar
+		slectNum++
+		isSelect[tmpindex] = true
+		var leftSelectNum, rightSelectNum int
+		for j := tmpindex - 1; j >= 0; j-- {
+			if leftSelectNum >= m {
+				break
+			}
+			if isSelect[j] {
+				continue
+			}
+			isSelect[j] = true
+			leftSelectNum++
+			res[j] = byteChar
+			slectNum++
+		}
+		for j := tmpindex + 1; j < n; j++ {
+			if rightSelectNum >= m {
+				break
+			}
+			if isSelect[j] {
+				continue
+			}
+			isSelect[j] = true
+			rightSelectNum++
+			res[j] = byteChar
+			slectNum++
+		}
+		// fmt.Println(slectNum, tmpindex)
+		teamA = !teamA
+	}
+	fmt.Println(string(res))
+}
+
+// func main() {
+// 	res := []bool{}
+// 	var n int
+// 	fmt.Scan(&n)
+// 	sc := bufio.NewScanner(os.Stdin)
+// 	for i := 0; i < n; i++ {
+// 		var len int
+// 		fmt.Scan(&len)
+// 		var s1, s2 string
+// 		sc.Scan()
+// 		s1 = sc.Text()
+// 		sc.Scan()
+// 		s2 = sc.Text()
+// 		res = append(res, compareAndSwap(s1, s2))
+// 	}
+// 	fmt.Println(res)
+// }
+
+// func compareAndSwap(s1, s2 string) bool {
+// 	tmps1 := []byte(s1)
+// 	for i := 0; i < len(s1); i++ {
+// 		if tmps1[i] != s2[i] {
+// 			if i == 0 || i == len(s1)-1 {
+// 				tmps1[i] = s2[i]
+// 			} else if tmps1[i] == tmps1[i+1] {
+// 				tmps1[i] = s2[i]
+// 				if tmps1[i+1] == '0' {
+// 					tmps1[i+1] = '1'
+// 				} else {
+// 					tmps1[i+1] = '0'
+// 				}
+// 			} else {
+// 				return false
+// 			}
+// 		}
+// 	}
+// 	return true
+// }
+
+// func testdefer(a int) int {
+// 	a++
+// 	defer func() {
+// 		a++
+// 		fmt.Println("???", a)
+// 	}()
+// 	return a
+// }
+
+// type Rectangle struct {
+// 	length int
+// 	width  int
+// }
+
+// var rect atomic.Value
+// var testStruct *Rectangle
+
+// func main() {
+// 	wg := sync.WaitGroup{}
+// 	testStruct = &Rectangle{}
+// 	wg.Add(100)
+// 	// 10 个协程并发更新
+// 	for i := 0; i < 100; i++ {
+// 		go func() {
+// 			defer wg.Done()
+// 			// update(i, i+5)
+// 			testStruct.length = i
+// 			testStruct.width = i + 5
+// 			rect.Store(testStruct)
+// 		}()
+// 	}
+// 	wg.Wait()
+// 	_r := rect.Load().(*Rectangle)
+// 	fmt.Printf("rect.width=%d\nrect.length=%d\n", _r.width, _r.length)
+// }
+
+// func main() {
+// 	// var a, b, c int
+// 	// fmt.Scan(&a, &b)
+// 	// fmt.Scan(&c)
+// 	// fmt.Println(a, b, c)
+// 	// sc := bufio.NewScanner(os.Stdin)
+
+// 	// sc.Scan()
+// 	// ss := sc.Text()
+// 	// sc.Scan()
+// 	// fmt.Println(ss)
+
+// 	var n, m, q int
+// 	fmt.Scan(&n, &m, &q)
+// 	sc := bufio.NewScanner(os.Stdin)
+// 	// 初始化棋盘
+// 	matrix := make([][]string, n)
+// 	for i := 0; i < n; i++ {
+// 		matrix[i] = make([]string, m)
+// 	}
+// 	// q个操作
+// 	for i := 0; i < q; i++ {
+// 		var handleCode, row, line int
+// 		var name string
+// 		sc.Scan()
+// 		tmp := sc.Bytes()
+// 		handleCode, row, line = int(tmp[0]-'0'), int(tmp[2]-'0'), int(tmp[4]-'0')
+// 		// check
+// 		if row <= 0 || line <= 0 || row > n || line > m {
+// 			continue
+// 		}
+// 		// 增加
+// 		if handleCode == 1 {
+// 			name = string(tmp[6:])
+// 			if matrix[row-1][line-1] == "" {
+// 				matrix[row-1][line-1] = name
+// 			}
+// 		} else if handleCode == 2 {
+// 			matrix[row-1][line-1] = name
+// 		}
+// 	}
+
+// 	for i := range matrix {
+// 		var tmp string
+// 		for j := range matrix[i] {
+// 			if matrix[i][j] == "" {
+// 				tmp += "NULL "
+// 			} else {
+// 				tmp += matrix[i][j] + " "
+// 			}
+// 		}
+// 		fmt.Println(tmp[:len(tmp)-1])
+// 	}
+// }
+
 // func main() {
 // 	// a := []int{-1, 1, 3, 3, 3, 2, 3, 2, 3, 2, 1, 0}
 // 	a := make([]int, 10000)
