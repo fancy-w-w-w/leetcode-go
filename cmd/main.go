@@ -2,72 +2,97 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"sort"
+	"time"
 )
 
 func main() {
-	var n, m int
-	fmt.Scanf("%d %d", &n, &m)
-
-	nums := make([]int, n)
-	for i := 0; i < n; i++ {
-		fmt.Scan(&nums[i])
-	}
-
-	res := make([]byte, n)
-	isSelect := make([]bool, n)
-	slectNum := 0
-	teamA := true
-
-	for slectNum < n {
-		var byteChar byte = 'B'
-		if teamA {
-			byteChar = 'A'
-		}
-
-		var tmp int = 0
-		var tmpindex int = 0
-		for i := range nums {
-			if isSelect[i] == true {
-				continue
-			}
-			if nums[i] > tmp {
-				tmp = nums[i]
-				tmpindex = i
-			}
-		}
-		res[tmpindex] = byteChar
-		slectNum++
-		isSelect[tmpindex] = true
-		var leftSelectNum, rightSelectNum int
-		for j := tmpindex - 1; j >= 0; j-- {
-			if leftSelectNum >= m {
-				break
-			}
-			if isSelect[j] {
-				continue
-			}
-			isSelect[j] = true
-			leftSelectNum++
-			res[j] = byteChar
-			slectNum++
-		}
-		for j := tmpindex + 1; j < n; j++ {
-			if rightSelectNum >= m {
-				break
-			}
-			if isSelect[j] {
-				continue
-			}
-			isSelect[j] = true
-			rightSelectNum++
-			res[j] = byteChar
-			slectNum++
-		}
-		// fmt.Println(slectNum, tmpindex)
-		teamA = !teamA
-	}
-	fmt.Println(string(res))
+	rand.Seed(time.Now().Unix())
+	n2 := rand.Float64()
+	n1 := 36.0
+	fmt.Println(n1 + float64(n2))
+	s := &ss{name: "wangcong"}
+	fmt.Println(s.getString())
+	data := []int{1, 2, 3, 4}
+	j := sort.Search(len(data), func(i int) bool {
+		return data[i] > 2
+	})
+	fmt.Println(j)
 }
+
+type ss struct {
+	name string
+}
+
+func (f *ss) getString() string {
+	return f.name
+}
+
+// func main() {
+// 	var n, m int
+// 	fmt.Scanf("%d %d", &n, &m)
+
+// 	nums := make([]int, n)
+// 	for i := 0; i < n; i++ {
+// 		fmt.Scan(&nums[i])
+// 	}
+
+// 	res := make([]byte, n)
+// 	isSelect := make([]bool, n)
+// 	slectNum := 0
+// 	teamA := true
+
+// 	for slectNum < n {
+// 		var byteChar byte = 'B'
+// 		if teamA {
+// 			byteChar = 'A'
+// 		}
+
+// 		var tmp int = 0
+// 		var tmpindex int = 0
+// 		for i := range nums {
+// 			if isSelect[i] == true {
+// 				continue
+// 			}
+// 			if nums[i] > tmp {
+// 				tmp = nums[i]
+// 				tmpindex = i
+// 			}
+// 		}
+// 		res[tmpindex] = byteChar
+// 		slectNum++
+// 		isSelect[tmpindex] = true
+// 		var leftSelectNum, rightSelectNum int
+// 		for j := tmpindex - 1; j >= 0; j-- {
+// 			if leftSelectNum >= m {
+// 				break
+// 			}
+// 			if isSelect[j] {
+// 				continue
+// 			}
+// 			isSelect[j] = true
+// 			leftSelectNum++
+// 			res[j] = byteChar
+// 			slectNum++
+// 		}
+// 		for j := tmpindex + 1; j < n; j++ {
+// 			if rightSelectNum >= m {
+// 				break
+// 			}
+// 			if isSelect[j] {
+// 				continue
+// 			}
+// 			isSelect[j] = true
+// 			rightSelectNum++
+// 			res[j] = byteChar
+// 			slectNum++
+// 		}
+// 		// fmt.Println(slectNum, tmpindex)
+// 		teamA = !teamA
+// 	}
+// 	fmt.Println(string(res))
+// }
 
 // func main() {
 // 	res := []bool{}

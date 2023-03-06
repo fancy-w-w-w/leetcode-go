@@ -109,4 +109,21 @@ public:
 
         return res.size() < s.size() ? "" : res;
     }
+
+    // 409 最长回文串
+    int longestPalindrome(string s){
+        unordered_map<char, int> count;
+        int res = 0;
+        for (auto c : s){
+            ++count[c];
+        } 
+        for (auto &p : count){
+            int v = p.second;
+            res += v/2 * 2;
+            if (v % 2 == 1 && res % 2 == 0){
+                ++res;
+            }
+        }
+        return res;
+    }
 };
